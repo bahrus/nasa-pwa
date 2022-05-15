@@ -1,0 +1,1 @@
+https://blog.cloudflare.com/edge-side-includes-with-cloudflare-workers/
