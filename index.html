@@ -26,7 +26,7 @@
         };
         registerServiceWorker();
     </script>
-    <form action="https://worker-typescript-template.bahrus.workers.dev/neo/rest/v1/feed" target=_blank>
+    <form action="https://worker-typescript-template.bahrus.workers.dev/neo/rest/v1/feed" target='[-input-obj]'>
         <label for='start_date'>From:</label>
         <input be-persistent type='date' id='start_date' name='start_date'>
         <label for='end_date'>To:</label>
@@ -36,9 +36,14 @@
 
         <button type='submit'>Submit</button>
     </form>
+    <noscript>
+        <iframe name='[-input-obj]'></iframe>
+    </noscript>
+    
     <script type='module'>
         import 'https://esm.run/be-persistent@0.0.16';
         import 'https://esm.run/be-observant@0.0.128';
+        import 'https://esm.run/be-reformable@0.0.41';
     </script>
 </body>
 </html>
