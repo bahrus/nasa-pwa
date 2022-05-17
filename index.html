@@ -30,12 +30,15 @@
         <label for='start_date'>From:</label>
         <input be-persistent type='date' id='start_date' name='start_date'>
         <label for='end_date'>To:</label>
-        <input be-persistent type='date' id='end_date' name='end_date'>
+        <input be-persistent be-observant='{
+            "min": {"observe": "#start_date",  "on": "input", "vft": "value"}
+        }' type='date' id='end_date' name='end_date'>
 
         <button type='submit'>Submit</button>
     </form>
     <script type='module'>
         import 'https://esm.run/be-persistent@0.0.16';
+        import 'https://esm.run/be-observant@0.0.128';
     </script>
 </body>
 </html>
