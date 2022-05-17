@@ -28,11 +28,14 @@
     </script>
     <form action="https://worker-typescript-template.bahrus.workers.dev/neo/rest/v1/feed" target=_blank>
         <label for='start_date'>From:</label>
-        <input type='date' id='start_date' name='start_date'>
+        <input be-persistent type='date' id='start_date' name='start_date'>
         <label for='end_date'>To:</label>
-        <input type='date' id='end_date' name='end_date'>
+        <input be-persistent type='date' id='end_date' name='end_date'>
 
         <button type='submit'>Submit</button>
     </form>
+    <script type='module'>
+        import 'https://esm.run/be-persistent@0.0.16';
+    </script>
 </body>
 </html>
